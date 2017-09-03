@@ -1,0 +1,18 @@
+docker-machine ls 查看dev是否running.   不是可以通过docker-machine start dev
+eval "$(docker-machine env dev)"     简单方法!eval 回车
+docker search mongo
+docker pull mongo
+
+查看环境是否运行：
+docker-machine ls
+
+docker-machine start dev
+
+启动docker的环境：
+eval "$(docker-machine env dev)" 
+
+查看所有image：
+docker ps -a
+
+启动image：
+docker start 7a386d28bdae

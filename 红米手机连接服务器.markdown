@@ -1,0 +1,69 @@
+###一、关于红米手机准备
+
+1. 确认红米手机已经是刷好了开发版的rom;
+2. 手机开启wifi并且连接内网；
+3. 电脑安装好adb
+4. usb数据线
+
+###二、关于红米手机设置
+#####1、检测是否连接电脑adb
+红米手机数据线连接电脑，
+
+```
+adb devices //检测是否连接到电脑
+```
+如果连接成功，如下所示：
+
+```
+* daemon not running. starting it now on port 5037 *
+* daemon started successfully *
+2a243d5	device
+```
+
+#####2、设置手机的adb的tcp/ip端口为5555
+```
+adb tcpip 5555
+```
+设置完成后：
+
+```
+restarting in TCP mode port: 5555
+```
+#####3、设置手机的root权限
+```
+adb root
+```
+设置完成后:
+
+```
+restarting adbd as root
+```
+###三、关于手机通过wifi连接主机服务器
+手机开启wifi并且连接到局域网，在手机`设置`中查看当前的ip地址，例如当前手机ip：10.10.1.109。
+
+登录主机服务器，输入：
+
+```
+adb connect 10.10.1.109  //连接ip地址为10.10.1.109的手机
+```
+
+```
+connected to 10.10.1.109:5555  //表明连接成功
+```
+
+检测是否成功：
+
+```
+adb devices
+```
+```
+List of devices attached
+10.10.1.115:5555	offline	//表明连接失败
+```
+如果连接失败，需要输入adb disconnect断开连接，然后在adb connect 10.10.1.109
+
+
+
+
+
+

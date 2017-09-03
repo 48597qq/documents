@@ -1,0 +1,22 @@
+web_pay:
+1、安装virtualenv，用于创建独立的Python环境；
+2、安装virtualenvwrapper，用于管理创建的多个python的virtualenv；默认virtualenvwrapper安装在/usr/local/bin下面
+	--列出虚拟环境列表：workon或者lsvirtualenv
+	--新建虚拟环境：mkvirtualenv [虚拟环境名称]
+	--启动/切换虚拟环境：workon [虚拟环境名称]
+	--删除虚拟环境：rmvirtualenv [虚拟环境名称]
+	--离开虚拟环境：deactivate
+
+
+python插件supervisord启动和关闭：
+启动服务：supervisord -c supervisord.conf
+关闭服务：supervisorctl -c supervisord.conf shutdown
+
+
+
+
+
+
+
+
+
