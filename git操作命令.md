@@ -1,8 +1,8 @@
-####1.使用vim查看git的配置文件
+#### 1.使用vim查看git的配置文件
 ```
 vim ~/.gitconfig
 ```
-####2.使用git命令查看git配置
+#### 2.使用git命令查看git配置
 查看所有的配置信息：
 
 ```
@@ -14,7 +14,7 @@ git config --list 或者：git config -l
 git config user.name #查看git的用户名
 ```
 
-####3.创建git仓库
+#### 3.创建git仓库
 进入当前文件夹,创建git仓库：
 
 ```
@@ -26,7 +26,7 @@ git init #创建git仓库
 # 将远程仓库的flask-mail项目拷贝到本地并且重命名为test_mail
 git clone https://github.com/mattupstate/flask-mail.git test_mail  
 ```
-#####1、查看git仓库分支状态:
+##### 1、查看git仓库分支状态:
 git仓库创建完成后，一般会查看远程仓库和本地仓库有哪些分支
 
 ```
@@ -41,7 +41,7 @@ git branch -a
 # 输出结果
 * master
 ```
-#####2、创建新的分支：
+##### 2、创建新的分支：
 在主分支master下创建新的分支develop:
 
 ```
@@ -66,7 +66,7 @@ Switched to branch 'develop'
   master
 ```
 
-#####3、将修改的文件提交到缓存中：
+##### 3、将修改的文件提交到缓存中：
 如果新建或者修改过文件之后，要提交到仓库中，首先需要将改动的部分提交到缓存当中
 
 ```
@@ -75,7 +75,7 @@ git add test.txt
 # 提交多个文件到魂村
 git add -A 或者git add --all
 ```
-#####4、查看缓存文件状态：
+##### 4、查看缓存文件状态：
 文件提交到缓存区域后，查看当前文件缓存区的状态
 
 ```
@@ -86,7 +86,7 @@ n branch develop
 Changes to be committed:
 	new file:   test.txt
 ```
-#####5、查看缓存文件改动的详细信息：
+##### 5、查看缓存文件改动的详细信息：
 执行 git diff 来查看执行 git status 的结果的详细信息，git diff 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。git diff 有两个主要的应用场景。
 
 ```
@@ -102,7 +102,30 @@ git diff HEAD
 # 显示摘要而非整个diff：
 git diff --stat
 ```
-#####6、提交文件到仓库：
+
+##### 6、文件忽略：
+文件路径忽略和取消忽略：
+```
+# 文件忽略
+git update-index --assume-unchanged toolmall-generator/toolmall-business-generator/src/main/resources/generator.xml
+
+# 取消文件忽略
+git update-index --no-assume-unchanged toolmall-generator/toolmall-business-generator/src/main/resources/generator.xml
+```
+
+但是忽略的文件多了，想找出所有被忽略的文件，并且取消忽略，暂时使用下面的办法：
+```
+# 找出当前文件夹下所有被忽略的文件
+git ls-files -v | grep '^h\ '
+
+# 提取文件路径，方法如下：
+git ls-files -v | grep '^h\ ' | awk '{print $2}'
+
+# 所有被忽略的文件，取消忽略：
+git ls-files -v | grep '^h' | awk '{print $2}' |xargs git update-index --no-assume-unchanged  
+```
+
+##### 7、提交文件到仓库：
 将缓存区的文件提交到git仓库当中
 
 ```
@@ -113,7 +136,7 @@ git commit -m '测试文本文件提交'
 	1 file changed, 0 insertions(+), 0 deletions(-)
 	create mode 100644 111111.txt
 ```
-#####7、撤销提交
+##### 8、撤销提交
 撤销缓存区的提交，即git add提交过的
 
 ```
@@ -128,7 +151,7 @@ git reset 或者 git reset HEAD
 git reset --hard HEAD^
 ```
 
-#####8、合并分支
+##### 9、合并分支
 系统在发布前，通常都要进行分支合并，首先要切换到要合并进去的分支，如果当前所在分支是develop，要合并到主分支master
 
 ```
