@@ -1,0 +1,391 @@
+
+[[_paths]]
+== 资源
+
+[[_4419b5ef0a95460ab165efcfb5bb00cf]]
+=== 商品分类接口
+Product Category Controller
+
+
+[[_wengll_1]]
+==== 根据商品分类ID查询
+....
+GET /category/list
+....
+
+
+===== 说明
+根据商品分类ID查询，获取商品列表信息，必须为三级分类ID
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|类型|名称|说明|类型|默认值
+|**Header**|**session** +
+__可选__|app用户登录后获取的session字段，请求授权接口时，需要传入。|string|`"{\"key\":\"3e261fb2-cb0c-4626-a100-d655334ddac72eb558ec6bd2dca22050fedfac424a3d\",\"sessionId\":\"61f5f5f7d2fe49bee8de0aac4a859e3e\",\"uid\":178764}"`
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_baba5da9f0747f77e915b3b36db31ee7,ApiResult«List«AppProductCategoryVO»»>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+[[_617593d9d35762f2b495b338b291da19]]
+=== 商品接口
+Product Controller
+
+
+[[_wengll_2]]
+==== 根据商品分类ID查询
+....
+GET /product/findByCategoryId
+....
+
+
+===== 说明
+根据商品分类ID查询，获取商品列表信息，必须为三级分类ID
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|类型|名称|说明|类型|默认值
+|**Header**|**session** +
+__可选__|app用户登录后获取的session字段，请求授权接口时，需要传入。|string|`"{\"key\":\"3e261fb2-cb0c-4626-a100-d655334ddac72eb558ec6bd2dca22050fedfac424a3d\",\"sessionId\":\"61f5f5f7d2fe49bee8de0aac4a859e3e\",\"uid\":178764}"`
+|**Query**|**categoryId** +
+__必填__|商品三级分类ID|integer (int64)|`125`
+|**Query**|**pageNum** +
+__可选__|当前页数|integer (int32)|`1`
+|**Query**|**pageSize** +
+__可选__|每页数量|integer (int32)|`20`
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_b4e07ea39bd588b447a7241adca4704b,ApiResult«ApiPageResult«AppProductVO»»>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+[[_cc5a2a29eba50125557c2a32c505069a]]
+=== 文章业务
+Article Controller
+
+
+[[_getarticleusingget_7]]
+==== 根据ID查询文章内容
+....
+GET /article/{id}
+....
+
+
+===== 说明
+根据ID查询文章内容
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|类型|名称|说明|类型|默认值
+|**Header**|**session** +
+__可选__|app用户登录后获取的session字段，请求授权接口时，需要传入。|string|`"{\"key\":\"3e261fb2-cb0c-4626-a100-d655334ddac72eb558ec6bd2dca22050fedfac424a3d\",\"sessionId\":\"61f5f5f7d2fe49bee8de0aac4a859e3e\",\"uid\":178764}"`
+|**Path**|**id** +
+__必填__|id|integer (int64)|
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_a4b39e8bb7ebd2c01dc87de8048aeec0,ApiResult«AppTodayMsg»>>
+|**204**|No Content|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+[[_c2b2a5e95bd61a4857b4de545f065fe6]]
+=== 短信业务
+Sms Auth Code Controller
+
+
+[[_getsmsauthcodeusingpost]]
+==== 图片验证码获取手机验证码
+....
+POST /smsauthcode/getSmsAuthCode
+....
+
+
+===== 说明
+图片验证码获取手机验证码
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|类型|名称|说明|类型|默认值
+|**Header**|**session** +
+__可选__|app用户登录后获取的session字段，请求授权接口时，需要传入。|string|`"{\"key\":\"3e261fb2-cb0c-4626-a100-d655334ddac72eb558ec6bd2dca22050fedfac424a3d\",\"sessionId\":\"61f5f5f7d2fe49bee8de0aac4a859e3e\",\"uid\":178764}"`
+|**Query**|**captcha** +
+__必填__|图片验证码|string|
+|**Query**|**captchaId** +
+__必填__|图片验证码ID|string|
+|**Query**|**chkMobileExist** +
+__必填__|是否验证手机号码重复：Y-是，N-否|string|
+|**Query**|**mobile** +
+__必填__|手机号码|string|
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_46083c6ed940cde06c292773763f9601,ApiResult«string»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+[[_getsmsauthcodefrsesusingpost]]
+==== 从session获取手机号后获取手机验证码
+....
+POST /smsauthcode/getSmsAuthCodeFrSes
+....
+
+
+===== 说明
+从session获取手机号后获取手机验证码
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|类型|名称|说明|类型|默认值
+|**Header**|**session** +
+__可选__|app用户登录后获取的session字段，请求授权接口时，需要传入。|string|`"{\"key\":\"3e261fb2-cb0c-4626-a100-d655334ddac72eb558ec6bd2dca22050fedfac424a3d\",\"sessionId\":\"61f5f5f7d2fe49bee8de0aac4a859e3e\",\"uid\":178764}"`
+|**Query**|**chkMobileExist** +
+__必填__|是否验证手机号码重复：Y-是，N-否|string|
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_46083c6ed940cde06c292773763f9601,ApiResult«string»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+[[_getsmsauthcodenocapusingpost]]
+==== 获取手机验证码
+....
+POST /smsauthcode/getSmsAuthCodeNocap
+....
+
+
+===== 说明
+获取手机验证码
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|类型|名称|说明|类型|默认值
+|**Header**|**session** +
+__可选__|app用户登录后获取的session字段，请求授权接口时，需要传入。|string|`"{\"key\":\"3e261fb2-cb0c-4626-a100-d655334ddac72eb558ec6bd2dca22050fedfac424a3d\",\"sessionId\":\"61f5f5f7d2fe49bee8de0aac4a859e3e\",\"uid\":178764}"`
+|**Query**|**chkMobileExist** +
+__必填__|是否验证手机号码重复：Y-是，N-否|string|
+|**Query**|**mobile** +
+__必填__|手机号码|string|
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_46083c6ed940cde06c292773763f9601,ApiResult«string»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+[[_33be1f1e9f5622971ec234e687e3229a]]
+=== 订单接口
+Order Controller
+
+
+[[_wengll]]
+==== 会员订单列表查询
+....
+GET /order/list
+....
+
+
+===== 说明
+根据会员ID、订单标题或编号查询订单信息
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|类型|名称|说明|类型|默认值
+|**Header**|**session** +
+__可选__|app用户登录后获取的session字段，请求授权接口时，需要传入。|string|`"{\"key\":\"3e261fb2-cb0c-4626-a100-d655334ddac72eb558ec6bd2dca22050fedfac424a3d\",\"sessionId\":\"61f5f5f7d2fe49bee8de0aac4a859e3e\",\"uid\":178764}"`
+|**Query**|**memberId** +
+__必填__|会员ID|integer (int64)|`178764`
+|**Query**|**orderButtonEnum** +
+__可选__|订单按钮点击状态|enum (waitingPaymentOrder, waitingShippingOrder, waitingConfirmReceiveOrder, waitingReviewOrder)|`"waitingPaymentOrder"`
+|**Query**|**pageNum** +
+__可选__|当前页数|integer (int32)|`1`
+|**Query**|**pageSize** +
+__可选__|每页数量|integer (int32)|`20`
+|**Query**|**searchKeyword** +
+__可选__|订单标题或编号|string|`"万克宝"`
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_b5f2d446e5d8d7efdfedc55944e36dc4,ApiResult«AppOrderResultVO«Order»»>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+[[_c2219b8f0020f0b60e7c4a52c1cc3e50]]
+=== 通用业务
+Common Controller
+
+
+[[_imageusingget]]
+==== 生成图片验证码
+....
+GET /common/captcha
+....
+
+
+===== 说明
+生成图片验证码
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|类型|名称|说明|类型|默认值
+|**Header**|**session** +
+__可选__|app用户登录后获取的session字段，请求授权接口时，需要传入。|string|`"{\"key\":\"3e261fb2-cb0c-4626-a100-d655334ddac72eb558ec6bd2dca22050fedfac424a3d\",\"sessionId\":\"61f5f5f7d2fe49bee8de0aac4a859e3e\",\"uid\":178764}"`
+|**Query**|**captchaId** +
+__必填__|图片验证码ID|string|
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `*/*`
+
+
+

@@ -1,0 +1,1021 @@
+
+[[_definitions]]
+== 定义
+
+[[_01886ac13bcff9625910c75ac25defbc]]
+=== ApiPageResult«AppProductVO»
+返回接口分页对象
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**list** +
+__可选__|数据列表|< <<_appproductvo,AppProductVO>> > array
+|**pageNum** +
+__可选__|页数 +
+**样例** : `1`|integer (int32)
+|**pageSize** +
+__可选__|每页数量 +
+**样例** : `20`|integer (int32)
+|**pages** +
+__可选__|总页数 +
+**样例** : `5`|integer (int32)
+|**total** +
+__可选__|数据总数 +
+**样例** : `100`|integer (int64)
+|===
+
+
+[[_231ebef6e955912bd7b7a1ad54b95923]]
+=== ApiPageResult«Order»
+返回接口分页对象
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**list** +
+__可选__|数据列表|< <<_order,Order>> > array
+|**pageNum** +
+__可选__|页数 +
+**样例** : `1`|integer (int32)
+|**pageSize** +
+__可选__|每页数量 +
+**样例** : `20`|integer (int32)
+|**pages** +
+__可选__|总页数 +
+**样例** : `5`|integer (int32)
+|**total** +
+__可选__|数据总数 +
+**样例** : `100`|integer (int64)
+|===
+
+
+[[_b4e07ea39bd588b447a7241adca4704b]]
+=== ApiResult«ApiPageResult«AppProductVO»»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|响应码 +
+**样例** : `0`|integer (int32)
+|**data** +
+__可选__|相应数据|<<_01886ac13bcff9625910c75ac25defbc,ApiPageResult«AppProductVO»>>
+|**message** +
+__可选__|接口响应信息 +
+**样例** : `"操作成功"`|string
+|**time** +
+__可选__|时间戳 +
+**样例** : `1548746809`|integer (int64)
+|===
+
+
+[[_b5f2d446e5d8d7efdfedc55944e36dc4]]
+=== ApiResult«AppOrderResultVO«Order»»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|响应码 +
+**样例** : `0`|integer (int32)
+|**data** +
+__可选__|相应数据|<<_e8fbbc0bededce8d62179af304b8c68e,AppOrderResultVO«Order»>>
+|**message** +
+__可选__|接口响应信息 +
+**样例** : `"操作成功"`|string
+|**time** +
+__可选__|时间戳 +
+**样例** : `1548746809`|integer (int64)
+|===
+
+
+[[_a4b39e8bb7ebd2c01dc87de8048aeec0]]
+=== ApiResult«AppTodayMsg»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|响应码 +
+**样例** : `0`|integer (int32)
+|**data** +
+__可选__|相应数据|<<_apptodaymsg,AppTodayMsg>>
+|**message** +
+__可选__|接口响应信息 +
+**样例** : `"操作成功"`|string
+|**time** +
+__可选__|时间戳 +
+**样例** : `1548746809`|integer (int64)
+|===
+
+
+[[_baba5da9f0747f77e915b3b36db31ee7]]
+=== ApiResult«List«AppProductCategoryVO»»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|响应码 +
+**样例** : `0`|integer (int32)
+|**data** +
+__可选__|相应数据|< <<_appproductcategoryvo,AppProductCategoryVO>> > array
+|**message** +
+__可选__|接口响应信息 +
+**样例** : `"操作成功"`|string
+|**time** +
+__可选__|时间戳 +
+**样例** : `1548746809`|integer (int64)
+|===
+
+
+[[_46083c6ed940cde06c292773763f9601]]
+=== ApiResult«string»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|响应码 +
+**样例** : `0`|integer (int32)
+|**data** +
+__可选__|相应数据|string
+|**message** +
+__可选__|接口响应信息 +
+**样例** : `"操作成功"`|string
+|**time** +
+__可选__|时间戳 +
+**样例** : `1548746809`|integer (int64)
+|===
+
+
+[[_e8fbbc0bededce8d62179af304b8c68e]]
+=== AppOrderResultVO«Order»
+会员订单查询对象
+
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**page** +
+__可选__|订单分页数据|<<_231ebef6e955912bd7b7a1ad54b95923,ApiPageResult«Order»>>
+|**searchKeyword** +
+__可选__|根据标题或者订单编码查询 +
+**样例** : `"201507202121"`|string
+|**waitingConfirmReceiveOrderCount** +
+__可选__|待收货订单数 +
+**样例** : `0`|integer (int64)
+|**waitingPaymentCount** +
+__可选__|待支付订单数 +
+**样例** : `0`|integer (int64)
+|**waitingReviewOrderCount** +
+__可选__|待评价订单数 +
+**样例** : `0`|integer (int64)
+|**waitingShippingOrderCount** +
+__可选__|代发货订单数 +
+**样例** : `0`|integer (int64)
+|===
+
+
+[[_appproductcategoryvo]]
+=== AppProductCategoryVO
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**children** +
+__可选__|子类列表|< <<_appproductcategoryvo,AppProductCategoryVO>> > array
+|**grade** +
+__可选__|分类级别，0-一级；1-二级；2-三级 +
+**样例** : `1`|integer (int32)
+|**id** +
+__可选__|商品分类ID +
+**样例** : `94`|integer (int64)
+|**image** +
+__可选__|图片 +
+**样例** : `"//image.toolmall.com/image/toolmallPc/ProductCata/image/2016/12/0fa078dc-8631-4a2b-b9f9-e6410ce5ef4c-source.jpg"`|string
+|**name** +
+__可选__|名称 +
+**样例** : `"钻孔类耗材"`|string
+|**parentId** +
+__可选__|父类ID +
+**样例** : `3123`|integer (int64)
+|===
+
+
+[[_appproductvo]]
+=== AppProductVO
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**activityPrice** +
+__可选__|活动价格 +
+**样例** : `128.0`|number
+|**activityType** +
+__可选__|活动类型 +
+**样例** : `0`|integer (int32)
+|**brandId** +
+__可选__|品牌ID +
+**样例** : `28`|integer (int64)
+|**brandName** +
+__可选__|品牌名称 +
+**样例** : `"力易得"`|string
+|**categoryId** +
+__可选__|分类Id +
+**样例** : `125`|integer (int64)
+|**categoryName** +
+__可选__|分类名称 +
+**样例** : `"家用工具组套"`|string
+|**id** +
+__可选__|商品ID +
+**样例** : `3501`|integer (int64)
+|**image** +
+__可选__|商品图片 +
+**样例** : `"//image.toolmall.com/image/toolmallPc/proudct/prouctView/2017/8/2e6d2bf9-350b-4a00-860d-112ef9e83e2b-170.jpg"`|string
+|**model** +
+__可选__|型号 +
+**样例** : `"E1107"`|string
+|**name** +
+__可选__|商品名称 +
+**样例** : `"力易得 13件套 家用工具组套/1套"`|string
+|**price** +
+__可选__|商品价格 +
+**样例** : `130.0`|number
+|**sn** +
+__可选__|SN编码 +
+**样例** : `"862709"`|string
+|**unicode** +
+__可选__|旺店通编码 +
+**样例** : `"100009260"`|string
+|===
+
+
+[[_apptodaymsg]]
+=== AppTodayMsg
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**adId** +
+__可选__|广告id|integer (int64)
+|**content** +
+__可选__|内容|string
+|**createTime** +
+__可选__|创建时间|string (date-time)
+|**createTimeStr** +
+__可选__|创建时间|string
+|**id** +
+__可选__|主键|integer (int64)
+|**isDeleted** +
+__可选__|是否删除：0-未删除；1-已删除|integer (int32)
+|**isPublication** +
+__可选__|是否发布|integer (int32)
+|**modifyTime** +
+__可选__|修改时间|string (date-time)
+|**modifyTimeStr** +
+__可选__|修改时间|string
+|**publicationTime** +
+__可选__|发布时间|string (date-time)
+|**publicationTimeStr** +
+__可选__|发布时间|string
+|**seoTitle** +
+__可选__|页面标题|string
+|**showOrder** +
+__可选__|排序值|integer (int32)
+|**title** +
+__可选__|标题|string
+|===
+
+
+[[_area]]
+=== Area
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**createTime** +
+__可选__|string (date-time)
+|**createTimeStr** +
+__可选__|string
+|**fullName** +
+__可选__|string
+|**id** +
+__可选__|integer (int64)
+|**isDeleted** +
+__可选__|integer (int32)
+|**modifyTime** +
+__可选__|string (date-time)
+|**modifyTimeStr** +
+__可选__|string
+|**name** +
+__可选__|string
+|**orders** +
+__可选__|integer (int32)
+|**parent** +
+__可选__|<<_area,Area>>
+|**parentId** +
+__可选__|integer (int64)
+|**treePath** +
+__可选__|string
+|===
+
+
+[[_cartitem]]
+=== CartItem
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**cartId** +
+__可选__|integer (int64)
+|**createTime** +
+__可选__|string (date-time)
+|**createTimeStr** +
+__可选__|string
+|**id** +
+__可选__|integer (int64)
+|**isDeleted** +
+__可选__|integer (int32)
+|**isEffective** +
+__可选__|integer (int32)
+|**isSelected** +
+__可选__|integer (int32)
+|**modifyTime** +
+__可选__|string (date-time)
+|**modifyTimeStr** +
+__可选__|string
+|**orders** +
+__可选__|integer (int32)
+|**product** +
+__可选__|<<_productext,ProductExt>>
+|**productId** +
+__可选__|integer (int64)
+|**quantity** +
+__可选__|integer (int32)
+|===
+
+
+[[_grantedauthority]]
+=== GrantedAuthority
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**authority** +
+__可选__|string
+|===
+
+
+[[_inputstream]]
+=== InputStream
+__类型__ : object
+
+
+[[_4998b3569615b7a93bfc703396747ee9]]
+=== Map«string,object»
+__类型__ : < string, object > map
+
+
+[[_member]]
+=== Member
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**accountNonExpired** +
+__可选__|boolean
+|**accountNonLocked** +
+__可选__|boolean
+|**address** +
+__可选__|string
+|**area** +
+__可选__|<<_area,Area>>
+|**areaId** +
+__可选__|integer (int64)
+|**attributeValue0** +
+__可选__|string
+|**attributeValue1** +
+__可选__|string
+|**attributeValue2** +
+__可选__|string
+|**attributeValue3** +
+__可选__|string
+|**attributeValue4** +
+__可选__|string
+|**attributeValue5** +
+__可选__|string
+|**attributeValue6** +
+__可选__|string
+|**attributeValue7** +
+__可选__|string
+|**attributeValue8** +
+__可选__|string
+|**attributeValue9** +
+__可选__|string
+|**authorities** +
+__可选__|< <<_grantedauthority,GrantedAuthority>> > array
+|**avatar** +
+__可选__|string
+|**balanceAmt** +
+__可选__|number
+|**birth** +
+__可选__|string (date-time)
+|**birthStr** +
+__可选__|string
+|**cartItemList** +
+__可选__|< <<_cartitem,CartItem>> > array
+|**channelSource** +
+__可选__|string
+|**costAmt** +
+__可选__|number
+|**createTime** +
+__可选__|string (date-time)
+|**createTimeStr** +
+__可选__|string
+|**credentialsNonExpired** +
+__可选__|boolean
+|**email** +
+__可选__|string
+|**enabled** +
+__可选__|boolean
+|**gender** +
+__可选__|integer (int32)
+|**id** +
+__可选__|integer (int64)
+|**isDeleted** +
+__可选__|integer (int32)
+|**isEnabled** +
+__可选__|integer (int32)
+|**isLocked** +
+__可选__|integer (int32)
+|**lockedTime** +
+__可选__|string (date-time)
+|**lockedTimeStr** +
+__可选__|string
+|**loginFailCount** +
+__可选__|integer (int32)
+|**loginIp** +
+__可选__|string
+|**loginLoc** +
+__可选__|string
+|**loginTime** +
+__可选__|string (date-time)
+|**loginTimeStr** +
+__可选__|string
+|**mobile** +
+__可选__|string
+|**modifyTime** +
+__可选__|string (date-time)
+|**modifyTimeStr** +
+__可选__|string
+|**name** +
+__可选__|string
+|**nickname** +
+__可选__|string
+|**notifyType** +
+__可选__|integer (int32)
+|**password** +
+__可选__|string
+|**quantity** +
+__可选__|integer (int32)
+|**regLoc** +
+__可选__|string
+|**regPage** +
+__可选__|string
+|**registerChannelType** +
+__可选__|integer (int32)
+|**registerIp** +
+__可选__|string
+|**reviews** +
+__可选__|< <<_review,Review>> > array
+|**safeKeyExpire** +
+__可选__|string (date-time)
+|**safeKeyValue** +
+__可选__|string
+|**sendCps** +
+__可选__|integer (int32)
+|**telephone** +
+__可选__|string
+|**thrdLoginId** +
+__可选__|string
+|**thrdLoginNickname** +
+__可选__|string
+|**thrdLoginProvider** +
+__可选__|integer (int32)
+|**userSafeKey** +
+__可选__|string
+|**username** +
+__可选__|string
+|**zipCode** +
+__可选__|string
+|===
+
+
+[[_order]]
+=== Order
+会员订单对象
+
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**area** +
+__可选__|<<_area,Area>>
+|**areaId** +
+__可选__|integer (int64)
+|**areaName** +
+__可选__|string
+|**cancelReason** +
+__可选__|integer (int32)
+|**cancelTime** +
+__可选__|string (date-time)
+|**channel** +
+__可选__|integer (int32)
+|**confirmReceiveTime** +
+__可选__|string (date-time)
+|**consignee** +
+__可选__|string
+|**couponCode** +
+__可选__|integer (int64)
+|**couponDiscount** +
+__可选__|number
+|**createTime** +
+__可选__|string (date-time)
+|**createTimeStr** +
+__可选__|string
+|**detailAddress** +
+__可选__|string
+|**expire** +
+__可选__|string (date-time)
+|**expired** +
+__可选__|boolean
+|**fee** +
+__可选__|number
+|**freight** +
+__可选__|number
+|**id** +
+__可选__|integer (int64)
+|**invoiceId** +
+__可选__|integer (int64)
+|**isAllocatedStock** +
+__可选__|integer (int32)
+|**isConfirmReceive** +
+__可选__|integer (int32)
+|**isDeleted** +
+__可选__|integer (int32)
+|**isErpPush** +
+__可选__|integer (int32)
+|**lastShippingTime** +
+__可选__|string (date-time)
+|**logisticsId** +
+__可选__|integer (int64)
+|**member** +
+__可选__|<<_member,Member>>
+|**memberId** +
+__可选__|integer (int64)
+|**memo** +
+__可选__|string
+|**modifyTime** +
+__可选__|string (date-time)
+|**modifyTimeStr** +
+__可选__|string
+|**name** +
+__可选__|string
+|**orderAmount** +
+__可选__|number
+|**orderItemList** +
+__可选__|< <<_orderitem,OrderItem>> > array
+|**orderProcesses** +
+__可选__|< <<_4998b3569615b7a93bfc703396747ee9,Map«string,object»>> > array
+|**orderStatus** +
+__可选__|integer (int32)
+|**orderType** +
+__可选__|integer (int32)
+|**paidAmount** +
+__可选__|number
+|**paymentMethod** +
+__可选__|<<_paymentmethod,PaymentMethod>>
+|**paymentMethodId** +
+__可选__|integer (int64)
+|**paymentTime** +
+__可选__|string (date-time)
+|**paymentTimeStr** +
+__可选__|string
+|**phone** +
+__可选__|string
+|**promotion** +
+__可选__|string
+|**promotionDiscount** +
+__可选__|number
+|**quantity** +
+__可选__|integer (int32)
+|**refundTime** +
+__可选__|string (date-time)
+|**remark** +
+__可选__|string
+|**returnQuantity** +
+__可选__|integer (int32)
+|**returnTime** +
+__可选__|string (date-time)
+|**reviewStatus** +
+__可选__|integer (int32)
+|**shippedQuantity** +
+__可选__|integer (int32)
+|**shippingMethodId** +
+__可选__|integer (int64)
+|**shippingTime** +
+__可选__|string (date-time)
+|**shippingTimeStr** +
+__可选__|string
+|**sn** +
+__可选__|string
+|**source** +
+__可选__|string
+|**weight** +
+__可选__|number (double)
+|**zipCode** +
+__可选__|string
+|===
+
+
+[[_orderitem]]
+=== OrderItem
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**brandName** +
+__可选__|string
+|**createTime** +
+__可选__|string (date-time)
+|**createTimeStr** +
+__可选__|string
+|**descble** +
+__可选__|string
+|**finalAmount** +
+__可选__|number
+|**finalPrice** +
+__可选__|number
+|**freeNum** +
+__可选__|integer (int32)
+|**hasFreeProduct** +
+__可选__|integer (int32)
+|**id** +
+__可选__|integer (int64)
+|**isDeleted** +
+__可选__|integer (int32)
+|**isReviewed** +
+__可选__|integer (int32)
+|**model** +
+__可选__|string
+|**modifyTime** +
+__可选__|string (date-time)
+|**modifyTimeStr** +
+__可选__|string
+|**name** +
+__可选__|string
+|**orderId** +
+__可选__|integer (int64)
+|**orders** +
+__可选__|integer (int32)
+|**price** +
+__可选__|number
+|**product** +
+__可选__|<<_product,Product>>
+|**productId** +
+__可选__|integer (int64)
+|**promotionId** +
+__可选__|integer (int64)
+|**propertyValue** +
+__可选__|string
+|**quantity** +
+__可选__|integer (int32)
+|**refundStatus** +
+__可选__|integer (int32)
+|**remark** +
+__可选__|string
+|**returnQuantity** +
+__可选__|integer (int32)
+|**shippedQuantity** +
+__可选__|integer (int32)
+|**sn** +
+__可选__|string
+|**thumbnail** +
+__可选__|string
+|**unicode** +
+__可选__|string
+|**weight** +
+__可选__|number (double)
+|===
+
+
+[[_paymentmethod]]
+=== PaymentMethod
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**content** +
+__可选__|string
+|**createTime** +
+__可选__|string (date-time)
+|**createTimeStr** +
+__可选__|string
+|**description** +
+__可选__|string
+|**icon** +
+__可选__|string
+|**id** +
+__可选__|integer (int64)
+|**isDeleted** +
+__可选__|integer (int32)
+|**method** +
+__可选__|integer (int32)
+|**modifyTime** +
+__可选__|string (date-time)
+|**modifyTimeStr** +
+__可选__|string
+|**name** +
+__可选__|string
+|**orderFlow** +
+__可选__|integer (int32)
+|**orders** +
+__可选__|integer (int32)
+|**timeout** +
+__可选__|integer (int32)
+|===
+
+
+[[_product]]
+=== Product
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**allocatedStock** +
+__可选__|integer (int32)
+|**brief** +
+__可选__|string
+|**costPrice** +
+__可选__|number
+|**createTime** +
+__可选__|string (date-time)
+|**createTimeStr** +
+__可选__|string
+|**enableStock** +
+__可选__|integer (int32)
+|**id** +
+__可选__|integer (int64)
+|**image** +
+__可选__|string
+|**introduction** +
+__可选__|string
+|**isCashOnDelivery** +
+__可选__|integer (int32)
+|**isDeleted** +
+__可选__|integer (int32)
+|**isMarket** +
+__可选__|integer (int32)
+|**isShow** +
+__可选__|integer (int32)
+|**marketPrice** +
+__可选__|number
+|**model** +
+__可选__|string
+|**modifyTime** +
+__可选__|string (date-time)
+|**modifyTimeStr** +
+__可选__|string
+|**name** +
+__可选__|string
+|**path** +
+__可选__|string
+|**price** +
+__可选__|number
+|**remark** +
+__可选__|string
+|**sales** +
+__可选__|integer (int32)
+|**score** +
+__可选__|number (double)
+|**scoreCount** +
+__可选__|integer (int32)
+|**seoDescription** +
+__可选__|string
+|**seoKeyword** +
+__可选__|string
+|**seoTitle** +
+__可选__|string
+|**shippingMethodId** +
+__可选__|integer (int64)
+|**sn** +
+__可选__|string
+|**spuId** +
+__可选__|integer (int64)
+|**stock** +
+__可选__|integer (int32)
+|**unicode** +
+__可选__|string
+|**unit** +
+__可选__|string
+|**weight** +
+__可选__|number (double)
+|===
+
+
+[[_productext]]
+=== ProductExt
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**activityBeginTime** +
+__可选__|string (date-time)
+|**activityBuyLimit** +
+__可选__|integer (int32)
+|**activityEndTime** +
+__可选__|string (date-time)
+|**activityId** +
+__可选__|integer (int64)
+|**activityName** +
+__可选__|string
+|**activityOrders** +
+__可选__|integer (int32)
+|**activityPaymentNum** +
+__可选__|integer (int32)
+|**activityPrice** +
+__可选__|number
+|**activityStock** +
+__可选__|integer (int32)
+|**activityType** +
+__可选__|integer (int32)
+|**allocatedStock** +
+__可选__|integer (int32)
+|**brandId** +
+__可选__|integer (int64)
+|**brandName** +
+__可选__|string
+|**brief** +
+__可选__|string
+|**categoryId** +
+__可选__|integer (int64)
+|**categoryName** +
+__可选__|string
+|**costPrice** +
+__可选__|number
+|**createTime** +
+__可选__|string (date-time)
+|**createTimeStr** +
+__可选__|string
+|**enableStock** +
+__可选__|integer (int32)
+|**id** +
+__可选__|integer (int64)
+|**image** +
+__可选__|string
+|**imageList** +
+__可选__|< <<_productimage,ProductImage>> > array
+|**introduction** +
+__可选__|string
+|**isCashOnDelivery** +
+__可选__|integer (int32)
+|**isDeleted** +
+__可选__|integer (int32)
+|**isMarket** +
+__可选__|integer (int32)
+|**isShow** +
+__可选__|integer (int32)
+|**marketPrice** +
+__可选__|number
+|**model** +
+__可选__|string
+|**modifyTime** +
+__可选__|string (date-time)
+|**modifyTimeStr** +
+__可选__|string
+|**name** +
+__可选__|string
+|**path** +
+__可选__|string
+|**pcPromotionPrice** +
+__可选__|number
+|**price** +
+__可选__|number
+|**productImages** +
+__可选__|< <<_productimage,ProductImage>> > array
+|**remark** +
+__可选__|string
+|**sales** +
+__可选__|integer (int32)
+|**score** +
+__可选__|number (double)
+|**scoreCount** +
+__可选__|integer (int32)
+|**seoDescription** +
+__可选__|string
+|**seoKeyword** +
+__可选__|string
+|**seoTitle** +
+__可选__|string
+|**shippingMethodId** +
+__可选__|integer (int64)
+|**sn** +
+__可选__|string
+|**spuId** +
+__可选__|integer (int64)
+|**spuName** +
+__可选__|string
+|**stock** +
+__可选__|integer (int32)
+|**treePath** +
+__可选__|string
+|**treePaths** +
+__可选__|< integer (int64) > array
+|**unicode** +
+__可选__|string
+|**unit** +
+__可选__|string
+|**weight** +
+__可选__|number (double)
+|===
+
+
+[[_productimage]]
+=== ProductImage
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**file** +
+__可选__|file
+|**id** +
+__可选__|integer (int64)
+|**isDeleted** +
+__可选__|integer (int32)
+|**large** +
+__可选__|string
+|**medium** +
+__可选__|string
+|**medium400** +
+__可选__|string
+|**orders** +
+__可选__|integer (int32)
+|**productId** +
+__可选__|integer (int64)
+|**source** +
+__可选__|string
+|**thumbnail** +
+__可选__|string
+|**title** +
+__可选__|string
+|===
+
+
+[[_review]]
+=== Review
+
+[options="header", cols=".^3,.^4"]
+|===
+|名称|类型
+|**content** +
+__可选__|string
+|**createDate** +
+__可选__|string (date-time)
+|**createDateStr** +
+__可选__|string
+|**dummyMemberName** +
+__可选__|string
+|**dummyReviewDate** +
+__可选__|string (date-time)
+|**id** +
+__可选__|integer (int64)
+|**ip** +
+__可选__|string
+|**isAnonymity** +
+__可选__|integer (int32)
+|**isDeleted** +
+__可选__|integer (int32)
+|**isShow** +
+__可选__|integer (int32)
+|**memberId** +
+__可选__|integer (int64)
+|**modifyDate** +
+__可选__|string (date-time)
+|**modifyDateStr** +
+__可选__|string
+|**productId** +
+__可选__|integer (int64)
+|**score** +
+__可选__|integer (int32)
+|**scoreType** +
+__可选__|string
+|**userName** +
+__可选__|string
+|===
+
+
+
