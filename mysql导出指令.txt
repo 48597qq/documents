@@ -1,0 +1,1 @@
+mysqlbinlog --base64-output=DECODE-ROWS -v /data/local/mysql/logs/mysql-bin.000003>log1.txt

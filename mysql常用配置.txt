@@ -47,7 +47,7 @@ min_examined_row_limit = 100                    # 检索的行数必须达到此
 expire_logs_days = 5                            # MySQL binlog日志文件保存的过期时间，过期后自动删除
 
 # 主从复制设置
-log-bin = mysql-bin                            # 开启mysql binlog功能
+log-bin = /home/mysql/3306/log/mysql-bin      	# 开启mysql binlog功能
 binlog_format = ROW                            # binlog记录内容的方式，记录被操作的每一行
 binlog_row_image = minimal                      # 对于binlog_format = ROW模式时，减少记录日志的内容，只记录受影响的列
 
